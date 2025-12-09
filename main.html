@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Лабораторные</title>
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <header class="bg-primary text-white py-3">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <img id="logo" src="image1.png" class="img-fluid rounded-circle" style="width: 60px; height: 60px;" alt="Логотип">
+          </div>
+          <div class="col">
+            <div class="name h5 mb-0">Название сайта</div>
+          </div>
+          <nav class="col-auto d-none d-md-block">
+            <div class="nav">
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-white mx-2">Ссылка меню 1</a>
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-white mx-2">Ссылка 2</a>
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-white mx-2">Ссылка 3</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mt-3">
+      
+      <div class="row">
+        <div class="col-12 order-1 mb-4 d-md-none">
+          <nav class="navbar navbar-expand navbar-dark  rounded">
+            <div class="navbar-nav w-100">
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-dark py-2 text-center">Ссылка меню 1</a>
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-dark py-2 text-center">Ссылка 2</a>
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-dark py-2 text-center">Ссылка 3</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-12 order-2 order-lg-2 mb-4">
+          <div class="tables  p-3 rounded">
+            <h3 class="mb-3">Таблица</h3>
+            <div class="table-responsive">
+              <table border="2" class="w-100">
+                <thead>
+                  <tr>
+                    <th>Колонка 1</th>
+                    <th>Колонка 2</th>
+                    <th>Колонка 3</th>
+                    <th>Колонка 4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="3">Ячейка 11, объединеная с 12, 13</td>
+                    <td>Ячейка 14</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Ячейка 21, объединеная с 22</td>
+                    <td colspan="2">Ячейка 23, объединеная с 24</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 31</td>
+                    <td colspan="3">Ячейка 32, объединеная с 33, 34</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 41</td>
+                    <td colspan="3">Ячейка 42, объединеная с 43, 44</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 51</td>
+                    <td colspan="2">Ячейка 52, объединеная с 53</td>
+                    <td>Ячейка 54</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 61</td>
+                    <td colspan="2">Ячейка 62, объединеная с 63</td>
+                    <td>Ячейка 64</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-12 order-3 order-lg-1 mb-4">
+          <div class="links  p-3 rounded">
+            <h3 class="mb-3">Ссылки</h3>
+
+            <ul class="list-unstyled"> 
+              <li class="mb-2">
+                <a href="http://kubsu.ru" target="_blank">Официальный сайт КубГУ (HTTP)</a>
+              </li> 
+
+              <li class="mb-2">
+                <a href="https://kubsu.ru" target="_blank">Официальный сайт КубГУ</a>
+              </li> 
+
+              <li class="mb-2">
+                <a href="https://kubsu.ru" target="_blank">
+                  <img src="image.jpg" alt="Ссылка-изображение" class="img-fluid" width="300" height="200">
+                </a>
+              </li>
+                
+              <li class="mb-2">
+                <a href="#formi">Сокращенная ссылка на внутреннюю страницу (к форме)</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="#top">Сокращенная ссылка на главную страницу (в начало)</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="#fragment">Ссылка на фрагмент текущей страницы</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://www.kubsu.ru/ru/search?key=программирование" target="_blank">Ссылка с тремя параметрами в URL</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://www.kubsu.ru/ru/education/programs?id=1" target="_blank">Ссылка с параметром id в URL</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru/ru/news" target="_blank">Относительная ссылка на страницу в текущем каталоге</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru/ru/about" target="_blank">Относительная ссылка на страницу в каталоге about</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru/ru" target="_blank">Относительная ссылка на страницу в каталоге уровнем выше текущего</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru" target="_blank">Относительная ссылка на страницу в каталоге двумя уровнями выше</a>
+              </li> 
+                
+              <li class="mb-2">
+                <p>Кубанский государственный университет 5 сентября отмечает 
+                  <a href="https://www.kubsu.ru/ru/node/44498" target="_blank">105-летний юбилей.</a> 
+                  В этот день в 1920 году вуз впервые открыл двери для студентов трех факультетов.</p>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://ru.ruwiki.ru/wiki/Кубанский_государственный_университет#Структура" target="_blank">Ссылка на фрагмент страницы стороннего сайта</a>
+              </li>
+                
+              <li class="mb-2">
+                <img src="круг.png" alt="Ссылка-изображение" usemap="#mymap" class="img-fluid" width="800" height="300">
+                <map name="mymap">
+                  <area shape="circle" coords="0,0,400,200" href="https://kubsu.ru" alt="главная" target="_blank">
+                  <area shape="rect" coords="400,0,800,300" href="https://kubsu.ru/ru/news" alt="новости" target="_blank">
+                </map>
+              </li>
+                
+              <li class="mb-2">
+                <a href="">Ссылка с пустым href</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a>Ссылка без href</a>
+              </li>
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru" rel="nofollow" target="_blank">Ссылка, по которой запрещен переход поисковикам</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru" rel="noindex" target="_blank">Ссылка, запрещенная для индексации поисковиками</a>
+              </li>
+                
+              <li class="mb-2">
+                Нумерованный список ссылок с подписями title:
+                <ol class="mt-2">
+                  <li><a href="https://kubsu.ru" title="Официальный сайт университета" target="_blank">Кубанский государственный университет</a></li>
+                  <li><a href="https://kubsu.ru/ru/news" title="Новости КубГУ" target="_blank">Новости</a></li>
+                  <li><a href="https://kubsu.ru/ru/science" title="Научная деятельность" target="_blank">Наука</a></li>
+                </ol>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="ftp://ftp.freebsd.org/pub/FreeBSD/README.TXT" target="_blank">Ссылка на файл на сервере FTP</a>
+              </li> 
+            </ul>
+
+            <div id="fragment" class="mt-4 p-3 bg-light rounded">
+              <h4>Фрагмент страницы</h4>
+              <p>Это раздел страницы, на который ведет ссылка</p>
+              <a href="#top" class="btn btn-primary btn-sm">Вернуться наверх</a>
+            </div>
+            
+            <!-- Кнопка открытия формы обратной связи -->
+            <div class="text-center mt-4">
+              <button id="openFeedbackBtn" class="open-feedback-btn">
+                <i class="fas fa-envelope"></i> Форма обратной связи
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-12 mb-4  p-3 rounded">
+        <form>
+          <h3>Калькулятор ремонта смартфонов</h3>
+          <h6><label> Введите количество: </label></h6>
+          <input id="field1" name="field1" type="number" class="mb-1 rounded form-control" min="1" max="10" value="1" style="max-width: 150px;">
+          <h6><label> Тип услуги: </label></h6>
+          <div class="radio-group">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="serviceType" id="screen" value="screen" checked>
+              <label class="form-check-label" for="screen">Замена дисплея</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="serviceType" id="battery" value="battery">
+              <label class="form-check-label" for="battery">Замена батареи</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="serviceType" id="port" value="port">
+              <label class="form-check-label" for="port">Замена порта зарядки</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <h6><label for="brand"> Бренд телефона: </label></h6> 
+            <select id="brand" class="form-control" style="max-width: 200px;">
+              <option value="apple">iPhone</option>
+              <option value="samsung">Samsung</option>
+              <option value="xiaomi">Xiaomi</option>
+            </select> 
+          </div>
+
+          <div class="form-group">
+            <h6><label>Дополнительные опции:</label> </h6>
+            <div class="checkbox-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="urgent">
+                <label class="form-check-label" for="urgent">Срочный ремонт (+20%)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="warranty">
+                <label class="form-check-label" for="warranty">Расширенная гарантия (+15%)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="delivery">
+                <label class="form-check-label" for="delivery">Выезд мастера (+500 руб.)</label>
+              </div>
+            </div>
+          </div>
+                
+          <div class="result" id="result">
+            Общая стоимость: 0 руб.
+          </div>
+        </form>
+
+        <div class="gallery-container">
+          <h1 class="gallery-title">Фотогалерея</h1>
+          
+          <div class="gallery-wrapper">
+            <button class="gallery-nav prev" aria-label="Предыдущий слайд">‹</button>
+            
+            <div class="gallery-track">
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images2.jpg" alt="Пляж" class="gallery-image">
+                  <div class="gallery-caption">пляж</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images3.jpg" alt="Еще пляж" class="gallery-image">
+                  <div class="gallery-caption">ещё один пляж</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images4.jpg" alt="Каменный пляж" class="gallery-image">
+                  <div class="gallery-caption">каменный пляж</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images5.jpg" alt="Грязный пляж" class="gallery-image">
+                  <div class="gallery-caption">грязный пляж</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images6.webp" alt="мальдивы" class="gallery-image">
+                  <div class="gallery-caption">мальдивы</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images7.jpg" alt="Малазия" class="gallery-image">
+                  <div class="gallery-caption">малазийский пляж</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images8.jpg" alt="Снежный пляж" class="gallery-image">
+                  <div class="gallery-caption">Снежный пляж</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images9.webp" alt="Ночной пляж" class="gallery-image">
+                  <div class="gallery-caption">ночной пляж</div>
+                </div>
+              </div>
+            </div>
+            
+            <button class="gallery-nav next" aria-label="Следующий слайд">›</button>
+          </div>
+          
+          <div class="gallery-pager">
+            <div class="pager-info">
+              Страница <span class="current-page">1</span> из <span class="total-pages">3</span>
+            </div>
+            <div class="pager-dots">
+              <!-- dots will be generated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 order-4">
+          <div id="formi" class="forms  p-3 rounded">
+            <h3 class="mb-3">Форма</h3>
+
+            <form method="POST" id="mainForm">
+
+              <div class="form-group">
+                <label>ФИО:</label>
+                <input name="field-name-1" class="form-control" placeholder="Введите ваше ФИО" required />
+              </div>
+              
+              <div class="form-group">
+                <label>Телефон:</label>
+                <input name="phone" type="tel" class="form-control" value="+7" placeholder="Формат:8 999 123-45-67" required>  
+              </div>
+
+              <div class="form-group">
+                <label>Email:</label>
+                <input name="field-email" type="email" class="form-control" required placeholder="Введите вашу почту" />
+              </div>
+
+              <div class="form-group">
+                <label>Дата рождения:</label>
+                <input name="field-date" required type="date" class="form-control" />
+              </div>
+              
+              <div class="form-group">
+                <label>Пол:</label><br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" checked name="radio-group-1" value="Мужской" />
+                  <label class="form-check-label">Мужской</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radio-group-1" value="Женский" />
+                  <label class="form-check-label">Женский</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Ваш любимый язык программирования (выбрать несколько через ctrl):</label>
+                <select name="languages" required multiple class="form-control">
+                  <option value="Pascal">Pascal</option>
+                  <option value="C">C</option>
+                  <option value="C++">C++</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="PHP">PHP</option>
+                  <option value="Python">Python</option>
+                  <option value="Java">Java</option>
+                  <option value="Haskel">Haskel</option>
+                  <option value="Clojure">Clojure</option>
+                  <option value="Prolog">Prolog</option>
+                  <option value="Scala">Scala</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Биография:</label>
+                <textarea name="biography" class="form-control" placeholder="Ваша биография"></textarea>
+              </div>
+
+              <div class="form-group form-check">
+                <input type="checkbox" required class="form-check-input" name="agreement" />
+                <label class="form-check-label">С контрактом ознакомлен(а)</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Сохранить</button>
+            </form> 
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class=" text-white py-3 mt-4">
+      <div class="container text-center">
+        (с) Хороший человек 
+      </div>
+    </footer>
+  </div>
+
+  <!-- Попап с формой обратной связи -->
+  <div id="feedbackPopup" class="feedback-popup-overlay">
+    <div class="feedback-form-container">
+      <div class="feedback-form-header">
+        <h3>Обратная связь</h3>
+        <button id="closeFeedbackBtn" class="close-feedback-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div id="feedbackMessageContainer"></div>
+      
+      <form id="feedbackForm" class="feedback-form">
+        <div class="form-group">
+          <label for="feedbackFullName">ФИО *</label>
+          <input type="text" class="form-control" id="feedbackFullName" name="fullName" required placeholder="Введите ваше полное имя">
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackEmail">Email *</label>
+          <input type="email" class="form-control" id="feedbackEmail" name="email" required placeholder="example@domain.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackPhone">Телефон</label>
+          <input type="tel" class="form-control" id="feedbackPhone" name="phone" placeholder="+7 (XXX) XXX-XX-XX">
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackOrganization">Организация</label>
+          <input type="text" class="form-control" id="feedbackOrganization" name="organization" placeholder="Название вашей организации">
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackMessage">Сообщение *</label>
+          <textarea class="form-control" id="feedbackMessage" name="message" required rows="4" placeholder="Введите ваше сообщение..."></textarea>
+        </div>
+        
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="feedbackPrivacyPolicy" name="privacyPolicy" required>
+          <label class="form-check-label" for="feedbackPrivacyPolicy">
+            Я согласен с <a href="#" id="feedbackPrivacyPolicyLink">политикой обработки персональных данных</a> *
+          </label>
+        </div>
+        
+        <button type="submit" id="feedbackSubmitBtn" class="btn btn-primary btn-block">
+          <span id="feedbackSubmitText">Отправить сообщение</span>
+          <span id="feedbackSubmitLoading" class="loading" style="display: none;"></span>
+        </button>
+        
+        <div class="save-info">
+          <i class="fas fa-save"></i> Данные формы сохраняются автоматически
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
