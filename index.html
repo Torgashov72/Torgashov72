@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 1 — Сетевые утилиты Linux</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      max-width: 1000px; 
+      margin: 0 auto; 
+      padding: 20px; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+    }
+    .container {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    h1 { 
+      color: #2c3e50; 
+      text-align: center; 
+      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+    .subtitle {
+      text-align: center;
+      color: #7f8c8d;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+    }
+    .info-box {
+      background: #f8f9fa;
+      border-left: 5px solid #667eea;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    .info-box h3 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .info-box p {
+      line-height: 1.6;
+    }
+    .screenshot { 
+      margin: 30px 0; 
+      background: white; 
+      border: 2px solid #e9ecef; 
+      border-radius: 10px; 
+      padding: 20px; 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .screenshot h2 {
+      color: #667eea;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+    }
+    img { 
+      max-width: 100%; 
+      display: block; 
+      margin: 15px auto; 
+      border: 3px solid #dee2e6; 
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    code {
+      background: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      color: #e74c3c;
+    }
+    .git-section {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+    .git-section h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    .git-section ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    .git-section li {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+    .footer {
+      margin-top: 40px; 
+      padding-top: 20px; 
+      border-top: 2px solid #667eea; 
+      text-align: center; 
+      color: #2c3e50;
+      font-size: 1.1em;
+    }
+    .footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Задание 1: Сетевые утилиты Linux</h1>
+    <p class="subtitle">Курс: Сетевые технологии |</p>
+
+    <!-- Пункт 1 -->
+    <div class="info-box">
+      <h3>1️⃣ Подключение к учебному серверу по SSH</h3>
+      <p>
+        SSH (Secure Shell) — это протокол для безопасного удалённого доступа к серверам. 
+        Для подключения использовался клиент PuTTY или команда <code>ssh</code> в терминале.
+      </p>
+      <p>
+        <strong>Команда подключения:</strong><br>
+        <code>ssh u82364@kubsu-dev.ru -p 58528</code>
+      </p>
+      <p>
+        Параметр <code>-p 58528</code> указывает нестандартный порт для подключения (вместо стандартного 22).
+      </p>
+    </div>
+
+    <!-- Пункт 2 -->
+    <div class="screenshot">
+      <h2>📡 2. Команда PING — проверка доступности сервера</h2>
+      <p>
+        Команда <code>ping</code> отправляет ICMP-пакеты на указанный хост для проверки его доступности 
+        и измерения времени отклика (задержки).
+      </p>
+      <p>
+        <strong>Команда:</strong> <code>ping -c 4 kubsu.ru</code><br>
+        Параметр <code>-c 4</code> означает отправку 4 пакетов.
+      </p>
+      <p>
+        <strong>Результат:</strong> IP-адрес веб-сервера kubsu.ru — <strong>62.113.192.14</strong>
+      </p>
+      <img src="ping_kubsu.png" alt="Результат команды ping">
+    </div>
+
+    <!-- Пункт 3 -->
+    <div class="screenshot">
+      <h2>🔍 3. Команда NSLOOKUP — DNS-запросы</h2>
+      <p>
+        Команда <code>nslookup</code> (Name Server Lookup) используется для получения информации о DNS-записях домена.
+      </p>
+      <p>
+        <strong>A-записи</strong> — связывают доменное имя с IP-адресом.<br>
+        <strong>MX-записи</strong> — указывают почтовые серверы для домена.
+      </p>
+      <p>
+        <strong>Команды:</strong><br>
+        <code>nslookup kubsu.ru</code> — A-запись<br>
+        <code>nslookup -type=mx kubsu.ru</code> — MX-записи
+      </p>
+      <img src="nslookup_a.png" alt="A-записи">
+      <img src="nslookup_mx.png" alt="MX-записи">
+    </div>
+
+    <!-- Пункт 4 -->
+    <div class="screenshot">
+      <h2>ℹ️ 4. Команда WHOIS — информация о домене</h2>
+      <p>
+        Команда <code>whois</code> показывает информацию о регистрации домена: дату создания, 
+        владельца, контактные данные и срок действия.
+      </p>
+      <p>
+        <strong>Команды:</strong><br>
+        <code>whois kubsu.ru</code><br>
+        <code>whois kubsu-dev.ru</code>
+      </p>
+      <p>
+        <strong>Результат:</strong><br>
+        Домен <code>kubsu.ru</code> зарегистрирован: <strong>[дата из скриншота]</strong><br>
+        Домен <code>kubsu-dev.ru</code> зарегистрирован: <strong>[дата из скриншота]</strong>
+      </p>
+      <img src="whois_kubsu.png" alt="WHOIS kubsu.ru">
+      <img src="whois_kubsu-dev.png" alt="WHOIS kubsu-dev.ru">
+    </div>
+
+    <!-- Пункт 5 -->
+    <div class="info-box">
+      <h3>5️⃣ Создание веб-страницы и размещение на сервере</h3>
+      <p>
+        Была создана веб-страница <code>index.html</code> со всеми скриншотами и описанием. 
+        Файл загружен на сервер в папку <code>~/public_html/задание_1/</code>.
+      </p>
+      <p>
+        Страница доступна по адресу: <strong>http://u82364.kubsu-dev.ru/задание_1/</strong>
+      </p>
+    </div>
+
+    <!-- Пункт 6 -->
+    <div class="screenshot">
+      <h2>📂 6. Работа с FileZilla (SFTP)</h2>
+      <p>
+        FileZilla — это FTP/SFTP-клиент для передачи файлов между локальным компьютером и сервером.
+      </p>
+      <p>
+        <strong>Настройки подключения:</strong><br>
+        Хост: <code>kubsu-dev.ru</code><br>
+        Порт: <code>58528</code><br>
+        Протокол: <code>SFTP</code><br>
+        Логин: <code>u82364</code><br>
+        Пароль: <code>2807705</code>
+      </p>
+      <p>
+        Через FileZilla файлы были скачаны с сервера на локальный компьютер для добавления в Git.
+      </p>
+      <img src="sftp_screenshot.png" alt="FileZilla SFTP">
+    </div>
+
+    <!-- Git раздел -->
+    <div class="git-section">
+      <h2>💾 Git — система контроля версий</h2>
+      <p>
+        Git — это распределённая система контроля версий, которая позволяет отслеживать изменения 
+        в файлах и работать над проектами совместно с другими разработчиками.
+      </p>
+      <h3 style="color: white; margin-top: 15px;">Основные команды Git:</h3>
+      <ul>
+        <li>
+          <code>git init</code> — инициализирует новый репозиторий в текущей папке
+        </li>
+        <li>
+          <code>git add .</code> — добавляет все файлы в индекс (стадию подготовки коммита)
+        </li>
+        <li>
+          <code>git commit -m "сообщение"</code> — создаёт коммит с описанием изменений
+        </li>
+        <li>
+          <code>git status</code> — показывает статус файлов (изменённые, новые, удалённые)
+        </li>
+        <li>
+          <code>git log</code> — отображает историю коммитов
+        </li>
+        <li>
+          <code>git remote add origin URL</code> — связывает локальный репозиторий с удалённым
+        </li>
+        <li>
+          <code>git push -u origin main</code> — отправляет коммиты на удалённый репозиторий
+        </li>
+      </ul>
+      <p style="margin-top: 15px;">
+        Git позволяет сохранять историю изменений, откатываться к предыдущим версиям, 
+        работать над разными функциями одновременно (ветки) и легко делиться кодом через GitHub.
+      </p>
+    </div>
+
+
+  </div>
+</body>
+</html>
