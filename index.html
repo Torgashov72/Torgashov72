@@ -5,85 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Задание 1 — Сетевые утилиты Linux</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      max-width: 1000px; 
-      margin: 0 auto; 
-      padding: 20px; 
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #333;
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.5;
     }
-    .container {
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-    h1 { 
-      color: #2c3e50; 
-      text-align: center; 
+    h1 {
+      text-align: center;
       margin-bottom: 10px;
-      font-size: 2.5em;
+      font-size: 24px;
     }
     .subtitle {
       text-align: center;
-      color: #7f8c8d;
+      color: #555;
       margin-bottom: 30px;
-      font-size: 1.1em;
+      font-size: 16px;
     }
     .info-box {
-      background: #f8f9fa;
-      border-left: 5px solid #667eea;
+      background-color: #f5f5f5;
       padding: 15px;
       margin: 20px 0;
-      border-radius: 5px;
+      border-left: 3px solid #ccc;
     }
     .info-box h3 {
-      color: #2c3e50;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      font-size: 18px;
     }
-    .info-box p {
-      line-height: 1.6;
-    }
-    .screenshot { 
-      margin: 30px 0; 
-      background: white; 
-      border: 2px solid #e9ecef; 
-      border-radius: 10px; 
-      padding: 20px; 
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    .screenshot {
+      margin: 30px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
     }
     .screenshot h2 {
-      color: #667eea;
       margin-bottom: 15px;
-      font-size: 1.8em;
+      font-size: 20px;
+      color: #333;
     }
-    img { 
-      max-width: 100%; 
-      display: block; 
-      margin: 15px auto; 
-      border: 3px solid #dee2e6; 
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 15px auto;
+      border: 1px solid #ddd;
     }
     code {
-      background: #f1f1f1;
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-family: 'Courier New', monospace;
-      color: #e74c3c;
+      background-color: #f1f1f1;
+      padding: 2px 4px;
+      font-family: monospace;
+      color: #d00;
     }
     .git-section {
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      color: white;
-      padding: 25px;
-      border-radius: 10px;
+      background-color: #f9f9f9;
+      padding: 20px;
       margin: 30px 0;
+      border: 1px solid #ddd;
     }
     .git-section h2 {
-      color: white;
       margin-bottom: 15px;
+      font-size: 20px;
     }
     .git-section ul {
       padding-left: 20px;
@@ -91,15 +73,14 @@
     }
     .git-section li {
       margin: 8px 0;
-      line-height: 1.6;
     }
     .footer {
-      margin-top: 40px; 
-      padding-top: 20px; 
-      border-top: 2px solid #667eea; 
-      text-align: center; 
-      color: #2c3e50;
-      font-size: 1.1em;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+      text-align: center;
+      color: #333;
+      font-size: 16px;
     }
     .footer p {
       margin: 5px 0;
@@ -108,12 +89,11 @@
 </head>
 <body>
   <div class="container">
-    <h1>🎓 Задание 1: Сетевые утилиты Linux</h1>
-    <p class="subtitle">Курс: Сетевые технологии |</p>
+    <h1> Задание 1: Сетевые утилиты Linux</h1>
 
     <!-- Пункт 1 -->
     <div class="info-box">
-      <h3>1️⃣ Подключение к учебному серверу по SSH</h3>
+      <h3>1. Подключение к учебному серверу по SSH</h3>
       <p>
         SSH (Secure Shell) — это протокол для безопасного удалённого доступа к серверам. 
         Для подключения использовался клиент PuTTY или команда <code>ssh</code> в терминале.
@@ -129,7 +109,7 @@
 
     <!-- Пункт 2 -->
     <div class="screenshot">
-      <h2>📡 2. Команда PING — проверка доступности сервера</h2>
+      <h2> 2. Команда PING — проверка доступности сервера</h2>
       <p>
         Команда <code>ping</code> отправляет ICMP-пакеты на указанный хост для проверки его доступности 
         и измерения времени отклика (задержки).
@@ -146,7 +126,7 @@
 
     <!-- Пункт 3 -->
     <div class="screenshot">
-      <h2>🔍 3. Команда NSLOOKUP — DNS-запросы</h2>
+      <h2> 3. Команда NSLOOKUP — DNS-запросы</h2>
       <p>
         Команда <code>nslookup</code> (Name Server Lookup) используется для получения информации о DNS-записях домена.
       </p>
@@ -165,7 +145,7 @@
 
     <!-- Пункт 4 -->
     <div class="screenshot">
-      <h2>ℹ️ 4. Команда WHOIS — информация о домене</h2>
+      <h2> 4. Команда WHOIS — информация о домене</h2>
       <p>
         Команда <code>whois</code> показывает информацию о регистрации домена: дату создания, 
         владельца, контактные данные и срок действия.
@@ -186,7 +166,7 @@
 
     <!-- Пункт 5 -->
     <div class="info-box">
-      <h3>5️⃣ Создание веб-страницы и размещение на сервере</h3>
+      <h3> Создание веб-страницы и размещение на сервере</h3>
       <p>
         Была создана веб-страница <code>index.html</code> со всеми скриншотами и описанием. 
         Файл загружен на сервер в папку <code>~/public_html/задание_1/</code>.
@@ -198,7 +178,7 @@
 
     <!-- Пункт 6 -->
     <div class="screenshot">
-      <h2>📂 6. Работа с FileZilla (SFTP)</h2>
+      <h2> 6. Работа с FileZilla (SFTP)</h2>
       <p>
         FileZilla — это FTP/SFTP-клиент для передачи файлов между локальным компьютером и сервером.
       </p>
@@ -218,12 +198,12 @@
 
     <!-- Git раздел -->
     <div class="git-section">
-      <h2>💾 Git — система контроля версий</h2>
+      <h2> Git — система контроля версий</h2>
       <p>
         Git — это распределённая система контроля версий, которая позволяет отслеживать изменения 
         в файлах и работать над проектами совместно с другими разработчиками.
       </p>
-      <h3 style="color: white; margin-top: 15px;">Основные команды Git:</h3>
+      <h3 style="margin-top: 15px;">Основные команды Git:</h3>
       <ul>
         <li>
           <code>git init</code> — инициализирует новый репозиторий в текущей папке
